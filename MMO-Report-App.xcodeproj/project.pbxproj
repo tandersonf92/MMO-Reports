@@ -27,6 +27,7 @@
 		878F1E5D2A8FF47B00EAAEC3 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878F1E5C2A8FF47B00EAAEC3 /* FavoritesViewController.swift */; };
 		878F1E5F2A8FF4AF00EAAEC3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878F1E5E2A8FF4AF00EAAEC3 /* HomeViewController.swift */; };
 		878F1E612A8FF80E00EAAEC3 /* ShortNewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878F1E602A8FF80E00EAAEC3 /* ShortNewsViewModel.swift */; };
+		87BE46C32A90F3A100C3D489 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BE46C22A90F3A100C3D489 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		878F1E5C2A8FF47B00EAAEC3 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		878F1E5E2A8FF4AF00EAAEC3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		878F1E602A8FF80E00EAAEC3 /* ShortNewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortNewsViewModel.swift; sourceTree = "<group>"; };
+		87BE46C22A90F3A100C3D489 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				878F1E5E2A8FF4AF00EAAEC3 /* HomeViewController.swift */,
+				87BE46C22A90F3A100C3D489 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				870383402A8D6BBD00FE10FC /* ShortNewsViewController.swift in Sources */,
+				87BE46C32A90F3A100C3D489 /* HomeViewModel.swift in Sources */,
 				878F1E612A8FF80E00EAAEC3 /* ShortNewsViewModel.swift in Sources */,
 				870969E92A8EB9D8002ED064 /* String+Extension.swift in Sources */,
 				870383562A8D731C00FE10FC /* MMOGeneralNewsModel.swift in Sources */,

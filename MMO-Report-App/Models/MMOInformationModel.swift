@@ -1,6 +1,6 @@
 import Foundation
 
-struct MMOInformationModel: Decodable {
+struct MMOInformationResponse: Codable {
     let title: String
     let thumbnail: String
     let short_description: String

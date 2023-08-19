@@ -9,17 +9,21 @@ enum ApiError: Error {
 }
 
 enum TypeOfInformation {
-    case game(params: [String: String])
+    case game(params: [String: String]?)
     case news
     
     var baseURL: String {
         "https://www.mmobomb.com/api1"
     }
+
     var value: String {
         switch self {
         case .game(let params):
-            let configuredParams = setupQueryParams(using: params)
-            return "\(baseURL)/game?\(configuredParams)"
+            guard let params = params else {
+                return "\(baseURL)/games?"
+            }
+            let configuredParams = setupQueryParams(using: params )
+            return "\(baseURL)/games?\(configuredParams)"
         case .news:
             return "\(baseURL)/latestnews"
         }
@@ -33,7 +37,7 @@ enum TypeOfInformation {
 
 protocol ApiServiceProtocol {
     func fetchNews(completion: @escaping (Result<[MMOGeneralNewsResponse], ApiError>) -> Void)
-    func fetchMMOs(keywords: String, completion: @escaping (Result<MMOInformationModel, ApiError>) -> Void)
+    func fetchMMOs(keywords: String?, completion: @escaping (Result<[MMOInformationResponse], ApiError>) -> Void)
     func fetchImage(url: String, completion: @escaping (Data) -> Void)
 }
 
@@ -43,13 +47,12 @@ struct APIService: ApiServiceProtocol {
         fetchData(url: TypeOfInformation.news.value, completion: completion)
     }
     
-    func fetchMMOs(keywords: String, completion: @escaping (Result<MMOInformationModel, ApiError>) -> Void) {
-        
+    func fetchMMOs(keywords: String? = nil, completion: @escaping (Result<[MMOInformationResponse], ApiError>) -> Void) {
+        fetchData(url: TypeOfInformation.game(params: nil).value, completion: completion)
     }
     
     func fetchImage(url: String, completion: @escaping (Data) -> Void) {
         guard let url = URL(string: url) else { return }
-
         let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
             guard error == nil else { return }
 
@@ -63,7 +66,7 @@ struct APIService: ApiServiceProtocol {
         guard let url = URL(string: url) else {
             return completion(.failure(ApiError.invalidURL))
         }
-
+        print("URLLLLLLLLL: \(url)")
         let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
                 completion(.failure(.requestError(description: error.localizedDescription)))
@@ -76,7 +79,7 @@ struct APIService: ApiServiceProtocol {
 
             do {
                 let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
+//                decoder.keyDecodingStrategy = .convertFromSnakeCase
 
                 let result = try decoder.decode(T.self, from: data)
                 completion(.success(result))

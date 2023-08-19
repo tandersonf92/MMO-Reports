@@ -8,7 +8,6 @@ final class HomeViewController: UIViewController {
 
     private var mmos: [MMOInformationModel] = [] {
         didSet {
-            print(mmos.count)
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
             }
@@ -48,7 +47,7 @@ final class HomeViewController: UIViewController {
         viewModel.paginatingInformation.bind { [weak self] result in
             guard let self = self else { return }
             guard let unwrappedResultModel = result[self.lastSearchedPage] else { return }
-            unwrappedResultModel.forEach({ self.mmos.append($0) })
+            mmos.append(contentsOf: unwrappedResultModel)
         }
     }
 }

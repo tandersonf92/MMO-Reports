@@ -13,8 +13,8 @@ struct HomeTabBarViewModel {
     }
 
     var tabControllers: [UIViewController] {
-        [SearchMMOViewController(),
-         ShortNewsViewController(),
+        [HomeViewController(),
+         MainNewsViewController(),
          FavoritesViewController()]
     }
 }

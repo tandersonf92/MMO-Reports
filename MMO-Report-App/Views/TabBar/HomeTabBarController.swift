@@ -12,12 +12,11 @@ final class HomeTabBarController: UITabBarController {
     }
 
     private func configure() {
-//        let tabBarControllers = viewModel.tabControllers
         let tabBarTitles = viewModel.tabTitles
         let tabBarIcons = viewModel.tabIcons
 
-        let mainViewController = UINavigationController(rootViewController: SearchMMOViewController())
-        let newsViewController = UINavigationController(rootViewController: ShortNewsViewController())
+        let mainViewController = UINavigationController(rootViewController: HomeViewController())
+        let newsViewController = UINavigationController(rootViewController: MainNewsViewController())
         let favoritesViewController = UINavigationController(rootViewController: FavoritesViewController())
 
         let tabBarControllers = [mainViewController, newsViewController, favoritesViewController]
@@ -30,10 +29,7 @@ final class HomeTabBarController: UITabBarController {
             tabBarControllers[x].title = tabBarTitles[x]
         }
     }
-
 }
-
-
 
 // MARK: ViewConfiguration
 extension HomeTabBarController: ViewConfiguration {
@@ -41,12 +37,8 @@ extension HomeTabBarController: ViewConfiguration {
         tabBar.backgroundColor = .white
     }
 
-    func buildViews() {
+    func buildViews() { }
 
-    }
-
-    func setupConstraints() {
-
-    }
+    func setupConstraints() { }
 }
 

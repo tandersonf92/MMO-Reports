@@ -7,9 +7,9 @@
 
 import UIKit
 
-final class ShortNewsViewController: UIViewController {
+final class MainNewsViewController: UIViewController {
 
-    private let viewModel = ShortNewsViewModel(service:  APIService())
+    private let viewModel = MainNewsViewModel(service:  APIService())
 
     var news: [MMOGeneralNewsModel] = [] {
 
@@ -35,40 +35,21 @@ final class ShortNewsViewController: UIViewController {
         super.viewDidLoad()
         setupViews()
 
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        updateNews()
+    }
+
+    private func updateNews() {
         viewModel.searchNews { [weak self] response in
             self?.news = response
         }
-
-
-
-//        service.fetchNews { [weak self] result in
-//            switch result {
-//            case .success(let success):
-//
-//                DispatchQueue.main.async { [weak self] in
-//                    success.forEach({ news in
-//                        self?.service.fetchImage(url: news.mainImage, completion: { data in
-//                            let model = MMOGeneralNewsModel(title: news.title,
-//                                                            shortDescription: news.shortDescription,
-//                                                            thumbnail: news.thumbnail,
-//                                                            mainImage: news.mainImage,
-//                                                            articleContent: news.articleContent,
-//                                                            articleUrl: news.articleUrl,
-//                                                            thumbnailData: data)
-//                            self?.news.append(model)
-//                        })
-//                    })
-//
-//                        self?.tableView.reloadData()
-//                }
-//            case .failure(let failure):
-//                print("FAILURE: \(failure)")
-//            }
-//        }
     }
 }
 
-extension ShortNewsViewController: UITableViewDataSource, UITableViewDelegate {
+extension MainNewsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         news.count
     }
@@ -93,7 +74,7 @@ extension ShortNewsViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 // MARK: View Configuration
-extension ShortNewsViewController: ViewConfiguration {
+extension MainNewsViewController: ViewConfiguration {
     func configViews() {
         view.backgroundColor = .white
         title = "News"

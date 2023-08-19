@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         let mainVC = HomeTabBarController()
-        let newsVC = ShortNewsViewController()
+        let newsVC = MainNewsViewController()
         window?.rootViewController = mainVC
         window?.makeKeyAndVisible()
     }

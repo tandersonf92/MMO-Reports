@@ -48,18 +48,16 @@ struct APIService: ApiServiceProtocol {
     }
     
     func fetchImage(url: String, completion: @escaping (Data) -> Void) {
-//        fetchData(url: url, completion: completion)
         guard let url = URL(string: url) else { return }
 
         let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error { return }
+            guard error == nil else { return }
 
             guard let data = data else { return }
             completion(data)
         }
         dataTask.resume()
     }
-
 
     private func fetchData<T: Codable>(url: String, completion: @escaping (Result<T, ApiError>) -> Void) {
         guard let url = URL(string: url) else {

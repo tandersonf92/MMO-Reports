@@ -1,6 +1,6 @@
 import UIKit
 
-final class SearchMMOViewController: UIViewController {
+final class HomeViewController: UIViewController {
 
     // MARK: Lifecycle
     override func viewDidLoad() {
@@ -11,7 +11,7 @@ final class SearchMMOViewController: UIViewController {
 }
 
 // MARK: ViewConfiguration
-extension SearchMMOViewController: ViewConfiguration {
+extension HomeViewController: ViewConfiguration {
     func configViews() {
         view.backgroundColor = .yellow
         title = "Home"

@@ -9,21 +9,49 @@
 /* Begin PBXBuildFile section */
 		8703833C2A8D6BBD00FE10FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8703833B2A8D6BBD00FE10FC /* AppDelegate.swift */; };
 		8703833E2A8D6BBD00FE10FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8703833D2A8D6BBD00FE10FC /* SceneDelegate.swift */; };
-		870383402A8D6BBD00FE10FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8703833F2A8D6BBD00FE10FC /* ViewController.swift */; };
+		870383402A8D6BBD00FE10FC /* ShortNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8703833F2A8D6BBD00FE10FC /* ShortNewsViewController.swift */; };
 		870383432A8D6BBD00FE10FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 870383412A8D6BBD00FE10FC /* Main.storyboard */; };
 		870383452A8D6BBE00FE10FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 870383442A8D6BBE00FE10FC /* Assets.xcassets */; };
 		870383482A8D6BBE00FE10FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 870383462A8D6BBE00FE10FC /* LaunchScreen.storyboard */; };
+		870383512A8D6BED00FE10FC /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870383502A8D6BED00FE10FC /* ApiService.swift */; };
+		870383542A8D6CD400FE10FC /* MMOInformationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870383532A8D6CD400FE10FC /* MMOInformationModel.swift */; };
+		870383562A8D731C00FE10FC /* MMOGeneralNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870383552A8D731C00FE10FC /* MMOGeneralNewsModel.swift */; };
+		870383592A8D78AF00FE10FC /* MMONewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870383582A8D78AF00FE10FC /* MMONewsCell.swift */; };
+		8703835C2A8D78CC00FE10FC /* ViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8703835B2A8D78CC00FE10FC /* ViewConfiguration.swift */; };
+		8703835E2A8D790C00FE10FC /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8703835D2A8D790C00FE10FC /* UIView+Constraints.swift */; };
+		870969E72A8EB4CC002ED064 /* CompleteNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870969E62A8EB4CC002ED064 /* CompleteNewsViewController.swift */; };
+		870969E92A8EB9D8002ED064 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870969E82A8EB9D8002ED064 /* String+Extension.swift */; };
+		874EBCC52A8F90B000473311 /* FullNoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874EBCC42A8F90B000473311 /* FullNoticeViewController.swift */; };
+		878F1E582A8FF24C00EAAEC3 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878F1E572A8FF24C00EAAEC3 /* HomeTabBarController.swift */; };
+		878F1E5B2A8FF2B800EAAEC3 /* HomeTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878F1E5A2A8FF2B800EAAEC3 /* HomeTabBarViewModel.swift */; };
+		878F1E5D2A8FF47B00EAAEC3 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878F1E5C2A8FF47B00EAAEC3 /* FavoritesViewController.swift */; };
+		878F1E5F2A8FF4AF00EAAEC3 /* SearchMMOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878F1E5E2A8FF4AF00EAAEC3 /* SearchMMOViewController.swift */; };
+		878F1E612A8FF80E00EAAEC3 /* ShortNewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878F1E602A8FF80E00EAAEC3 /* ShortNewsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		870383382A8D6BBD00FE10FC /* MMO-Report-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MMO-Report-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8703833B2A8D6BBD00FE10FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8703833D2A8D6BBD00FE10FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8703833F2A8D6BBD00FE10FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8703833F2A8D6BBD00FE10FC /* ShortNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortNewsViewController.swift; sourceTree = "<group>"; };
 		870383422A8D6BBD00FE10FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		870383442A8D6BBE00FE10FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		870383472A8D6BBE00FE10FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		870383492A8D6BBE00FE10FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		870383502A8D6BED00FE10FC /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		870383532A8D6CD400FE10FC /* MMOInformationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMOInformationModel.swift; sourceTree = "<group>"; };
+		870383552A8D731C00FE10FC /* MMOGeneralNewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMOGeneralNewsModel.swift; sourceTree = "<group>"; };
+		870383582A8D78AF00FE10FC /* MMONewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMONewsCell.swift; sourceTree = "<group>"; };
+		8703835B2A8D78CC00FE10FC /* ViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConfiguration.swift; sourceTree = "<group>"; };
+		8703835D2A8D790C00FE10FC /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		870969E62A8EB4CC002ED064 /* CompleteNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteNewsViewController.swift; sourceTree = "<group>"; };
+		870969E82A8EB9D8002ED064 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		874EBCC42A8F90B000473311 /* FullNoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullNoticeViewController.swift; sourceTree = "<group>"; };
+		878F1E572A8FF24C00EAAEC3 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
+		878F1E5A2A8FF2B800EAAEC3 /* HomeTabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewModel.swift; sourceTree = "<group>"; };
+		878F1E5C2A8FF47B00EAAEC3 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		878F1E5E2A8FF4AF00EAAEC3 /* SearchMMOViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMMOViewController.swift; sourceTree = "<group>"; };
+		878F1E602A8FF80E00EAAEC3 /* ShortNewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortNewsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +84,77 @@
 		8703833A2A8D6BBD00FE10FC /* MMO-Report-App */ = {
 			isa = PBXGroup;
 			children = (
+				878F1E592A8FF2AD00EAAEC3 /* ViewModels */,
+				874EBCC32A8F908000473311 /* Views */,
+				8703835A2A8D78C100FE10FC /* Extensions */,
+				870383572A8D789900FE10FC /* Cells */,
+				870383522A8D6C7A00FE10FC /* Models */,
+				8703834F2A8D6BE600FE10FC /* Service */,
 				8703833B2A8D6BBD00FE10FC /* AppDelegate.swift */,
 				8703833D2A8D6BBD00FE10FC /* SceneDelegate.swift */,
-				8703833F2A8D6BBD00FE10FC /* ViewController.swift */,
 				870383412A8D6BBD00FE10FC /* Main.storyboard */,
 				870383442A8D6BBE00FE10FC /* Assets.xcassets */,
 				870383462A8D6BBE00FE10FC /* LaunchScreen.storyboard */,
 				870383492A8D6BBE00FE10FC /* Info.plist */,
 			);
 			path = "MMO-Report-App";
+			sourceTree = "<group>";
+		};
+		8703834F2A8D6BE600FE10FC /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				870383502A8D6BED00FE10FC /* ApiService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		870383522A8D6C7A00FE10FC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				870383532A8D6CD400FE10FC /* MMOInformationModel.swift */,
+				870383552A8D731C00FE10FC /* MMOGeneralNewsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		870383572A8D789900FE10FC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				870383582A8D78AF00FE10FC /* MMONewsCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8703835A2A8D78C100FE10FC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8703835B2A8D78CC00FE10FC /* ViewConfiguration.swift */,
+				8703835D2A8D790C00FE10FC /* UIView+Constraints.swift */,
+				870969E82A8EB9D8002ED064 /* String+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		874EBCC32A8F908000473311 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8703833F2A8D6BBD00FE10FC /* ShortNewsViewController.swift */,
+				870969E62A8EB4CC002ED064 /* CompleteNewsViewController.swift */,
+				874EBCC42A8F90B000473311 /* FullNoticeViewController.swift */,
+				878F1E572A8FF24C00EAAEC3 /* HomeTabBarController.swift */,
+				878F1E5C2A8FF47B00EAAEC3 /* FavoritesViewController.swift */,
+				878F1E5E2A8FF4AF00EAAEC3 /* SearchMMOViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		878F1E592A8FF2AD00EAAEC3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				878F1E5A2A8FF2B800EAAEC3 /* HomeTabBarViewModel.swift */,
+				878F1E602A8FF80E00EAAEC3 /* ShortNewsViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +228,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				870383402A8D6BBD00FE10FC /* ViewController.swift in Sources */,
+				870383402A8D6BBD00FE10FC /* ShortNewsViewController.swift in Sources */,
+				878F1E612A8FF80E00EAAEC3 /* ShortNewsViewModel.swift in Sources */,
+				870969E92A8EB9D8002ED064 /* String+Extension.swift in Sources */,
+				870383562A8D731C00FE10FC /* MMOGeneralNewsModel.swift in Sources */,
+				870383542A8D6CD400FE10FC /* MMOInformationModel.swift in Sources */,
+				878F1E582A8FF24C00EAAEC3 /* HomeTabBarController.swift in Sources */,
+				8703835E2A8D790C00FE10FC /* UIView+Constraints.swift in Sources */,
+				878F1E5F2A8FF4AF00EAAEC3 /* SearchMMOViewController.swift in Sources */,
 				8703833C2A8D6BBD00FE10FC /* AppDelegate.swift in Sources */,
+				870383512A8D6BED00FE10FC /* ApiService.swift in Sources */,
+				870969E72A8EB4CC002ED064 /* CompleteNewsViewController.swift in Sources */,
+				8703835C2A8D78CC00FE10FC /* ViewConfiguration.swift in Sources */,
+				878F1E5D2A8FF47B00EAAEC3 /* FavoritesViewController.swift in Sources */,
+				874EBCC52A8F90B000473311 /* FullNoticeViewController.swift in Sources */,
+				870383592A8D78AF00FE10FC /* MMONewsCell.swift in Sources */,
 				8703833E2A8D6BBD00FE10FC /* SceneDelegate.swift in Sources */,
+				878F1E5B2A8FF2B800EAAEC3 /* HomeTabBarViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +396,6 @@
 				INFOPLIST_FILE = "MMO-Report-App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +423,6 @@
 				INFOPLIST_FILE = "MMO-Report-App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

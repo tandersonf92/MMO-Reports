@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 struct MMOInformationResponse: Codable {
     let title: String
@@ -10,7 +10,18 @@ struct MMOInformationResponse: Codable {
     let publisher: String
     let developer: String
     let release_date: String
-    let profile_url: String // https:\/\/www.mmobomb.com\/kritika tem que virar -> https://www.mmobomb.com/review/kritika
+}
+
+struct MMOInformationModel {
+    let title: String
+    let thumbnailImage: UIImage?
+    let short_description: String
+    let game_url: String
+    let genre: String
+    let platform: String
+    let publisher: String
+    let developer: String
+    let release_date: String
 }
 
 //enum Genre {

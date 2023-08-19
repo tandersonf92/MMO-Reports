@@ -28,6 +28,8 @@
 		878F1E5F2A8FF4AF00EAAEC3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878F1E5E2A8FF4AF00EAAEC3 /* HomeViewController.swift */; };
 		878F1E612A8FF80E00EAAEC3 /* ShortNewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878F1E602A8FF80E00EAAEC3 /* ShortNewsViewModel.swift */; };
 		87BE46C32A90F3A100C3D489 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BE46C22A90F3A100C3D489 /* HomeViewModel.swift */; };
+		87BE46C52A91087500C3D489 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BE46C42A91087500C3D489 /* HomeCollectionViewCell.swift */; };
+		87FC24112A9149F50085DCDB /* ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FC24102A9149F50085DCDB /* ObservableObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		878F1E5E2A8FF4AF00EAAEC3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		878F1E602A8FF80E00EAAEC3 /* ShortNewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortNewsViewModel.swift; sourceTree = "<group>"; };
 		87BE46C22A90F3A100C3D489 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		87BE46C42A91087500C3D489 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		87FC24102A9149F50085DCDB /* ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 		8703833A2A8D6BBD00FE10FC /* MMO-Report-App */ = {
 			isa = PBXGroup;
 			children = (
+				87FC240F2A9149EC0085DCDB /* Observable */,
 				878F1E592A8FF2AD00EAAEC3 /* ViewModels */,
 				874EBCC32A8F908000473311 /* Views */,
 				8703835A2A8D78C100FE10FC /* Extensions */,
@@ -123,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				870383582A8D78AF00FE10FC /* MMONewsCell.swift */,
+				87BE46C42A91087500C3D489 /* HomeCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -140,12 +146,12 @@
 		874EBCC32A8F908000473311 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				87BE46C82A91113B00C3D489 /* Favorites */,
+				87BE46C72A91113600C3D489 /* FullNotice */,
+				87BE46C62A91112D00C3D489 /* CompleteNews */,
 				87BE46C12A90F2FA00C3D489 /* MainNews */,
 				87BE46C02A90F2D400C3D489 /* TabBar */,
 				87BE46BF2A90F2CE00C3D489 /* Home */,
-				870969E62A8EB4CC002ED064 /* CompleteNewsViewController.swift */,
-				874EBCC42A8F90B000473311 /* FullNoticeViewController.swift */,
-				878F1E5C2A8FF47B00EAAEC3 /* FavoritesViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,6 +188,38 @@
 				8703833F2A8D6BBD00FE10FC /* ShortNewsViewController.swift */,
 			);
 			path = MainNews;
+			sourceTree = "<group>";
+		};
+		87BE46C62A91112D00C3D489 /* CompleteNews */ = {
+			isa = PBXGroup;
+			children = (
+				870969E62A8EB4CC002ED064 /* CompleteNewsViewController.swift */,
+			);
+			path = CompleteNews;
+			sourceTree = "<group>";
+		};
+		87BE46C72A91113600C3D489 /* FullNotice */ = {
+			isa = PBXGroup;
+			children = (
+				874EBCC42A8F90B000473311 /* FullNoticeViewController.swift */,
+			);
+			path = FullNotice;
+			sourceTree = "<group>";
+		};
+		87BE46C82A91113B00C3D489 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				878F1E5C2A8FF47B00EAAEC3 /* FavoritesViewController.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		87FC240F2A9149EC0085DCDB /* Observable */ = {
+			isa = PBXGroup;
+			children = (
+				87FC24102A9149F50085DCDB /* ObservableObject.swift */,
+			);
+			path = Observable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +296,7 @@
 				870383402A8D6BBD00FE10FC /* ShortNewsViewController.swift in Sources */,
 				87BE46C32A90F3A100C3D489 /* HomeViewModel.swift in Sources */,
 				878F1E612A8FF80E00EAAEC3 /* ShortNewsViewModel.swift in Sources */,
+				87BE46C52A91087500C3D489 /* HomeCollectionViewCell.swift in Sources */,
 				870969E92A8EB9D8002ED064 /* String+Extension.swift in Sources */,
 				870383562A8D731C00FE10FC /* MMOGeneralNewsModel.swift in Sources */,
 				870383542A8D6CD400FE10FC /* MMOInformationModel.swift in Sources */,
@@ -270,6 +309,7 @@
 				8703835C2A8D78CC00FE10FC /* ViewConfiguration.swift in Sources */,
 				878F1E5D2A8FF47B00EAAEC3 /* FavoritesViewController.swift in Sources */,
 				874EBCC52A8F90B000473311 /* FullNoticeViewController.swift in Sources */,
+				87FC24112A9149F50085DCDB /* ObservableObject.swift in Sources */,
 				870383592A8D78AF00FE10FC /* MMONewsCell.swift in Sources */,
 				8703833E2A8D6BBD00FE10FC /* SceneDelegate.swift in Sources */,
 				878F1E5B2A8FF2B800EAAEC3 /* HomeTabBarViewModel.swift in Sources */,

@@ -39,7 +39,7 @@ struct MainNewsViewModel {
                     })
                 }
             case .failure:
-                print("ERROR")
+                print("ERROR fetchNews")
             }
         }
     }

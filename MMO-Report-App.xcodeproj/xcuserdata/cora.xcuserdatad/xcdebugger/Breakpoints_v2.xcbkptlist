@@ -270,8 +270,8 @@
             filePath = "MMO-Report-App/Views/Home/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "setupPaginationAndGetModelList2()"
             landmarkType = "7">
             <Locations>
@@ -348,8 +348,8 @@
             filePath = "MMO-Report-App/Views/Home/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "setupPaginationAndGetModelList()"
             landmarkType = "7">
          </BreakpointContent>
@@ -364,8 +364,8 @@
             filePath = "MMO-Report-App/Views/Home/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "setupPaginationAndGetModelList()"
             landmarkType = "7">
          </BreakpointContent>

@@ -14,6 +14,7 @@ struct MMOInformationResponse: Codable {
 
 struct MMOInformationModel {
     let title: String
+    let thumbnail: String
     let thumbnailImage: UIImage?
     let short_description: String
     let game_url: String

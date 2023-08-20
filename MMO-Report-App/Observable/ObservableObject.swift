@@ -4,7 +4,6 @@ final class ObservableObject<T> {
 
     var value: T {
         didSet {
-            print("VALUEEEEEEE:")
             listener?(value)
         }
     }

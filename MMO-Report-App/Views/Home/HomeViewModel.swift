@@ -3,22 +3,21 @@ final class HomeViewModel {
     
     private let service: ApiServiceProtocol
     
-    private var fullMMOs: [MMOInformationResponse]?
+    private var fullMMOs: [MMOInformationResponse] = []
     private var numberOfPages: Int = 0
     private var actualPage: Int = 0
-    private var mmosModel: [MMOInformationModel?] = []
-    private var firstPageResponseList:  [MMOInformationResponse] = []
-    private var firstPageModelList:  [MMOInformationModel] = [] {
+    var isLastPage: Bool = false
+    var listOfMMos: ObservableObject<[MMOInformationModel]> = ObservableObject([])
+
+    private var mmosModel: [MMOInformationModel] = [] {
         didSet {
-            if firstPageModelList.count == 20 {
-                paginatingInformation.value[0] = firstPageModelList
+            let itemsInThisPage = isLastPage ? mmosModel.count % 20 : 0
+            if mmosModel.count % 20 == itemsInThisPage {
+                listOfMMos.value = mmosModel
             }
         }
     }
-    
-    var paginatingInformation: ObservableObject<[Int: [MMOInformationModel]]> = ObservableObject([:])
-    var paginatingInformationClone: ObservableObject<[Int: [MMOInformationModel]]> = ObservableObject([:])
-    
+
     init(service: ApiServiceProtocol = APIService()) {
         self.service = service
     }
@@ -40,61 +39,44 @@ final class HomeViewModel {
     }
 
     private func setupPagination() {
-        guard var fullMMOs = fullMMOs else { return }
-        for pageNumber in 0...numberOfPages - 1 {
-            let isLastPage: Bool = pageNumber == numberOfPages - 1
+        isLastPage = actualPage == numberOfPages - 1
 
-            let informationsPerPage: Int = isLastPage ? fullMMOs.count % 20 : 20
-            var paginatedMMOs: [MMOInformationResponse] = []
-            var mmoModelsPerPage: [MMOInformationModel] = []
+        let informationsPerPage: Int = isLastPage ? fullMMOs.count % 20 : 20
+        var paginatedMMOs: [MMOInformationResponse] = []
 
-            for _ in 1...informationsPerPage {
-                paginatedMMOs.append((fullMMOs.removeFirst()))
-            }
-            paginatedMMOs.enumerated().forEach { index, mmoResponse in
-                let model: MMOInformationModel
-                if pageNumber == 0 {
-                    firstPageResponseList.append(mmoResponse)
-                } else {
-                    model = buildModelWithoutInitialImage(using: mmoResponse)
-                    mmoModelsPerPage.append(model)
-                }
 
-                if index + 1 == informationsPerPage {
-                    if pageNumber == 0 {
-                        buildCompleteModel(using: firstPageResponseList)
-                    }
-                }
+        for _ in 1...informationsPerPage {
+            paginatedMMOs.append((fullMMOs.removeFirst()))
+        }
+
+        paginatedMMOs.enumerated().forEach { index, mmoResponse in
+
+            if index + 1 == informationsPerPage {
+                buildCompleteModel(using: paginatedMMOs)
             }
         }
     }
 
     func fetchNextPage() {
         actualPage += 1
-    }
+        isLastPage = actualPage == numberOfPages - 1
+        let informationsPerPage: Int = isLastPage ? fullMMOs.count % 20 : 20
+        var paginatedMMOs: [MMOInformationResponse] = []
 
-    func buildModelWithoutInitialImage(using response: MMOInformationResponse) -> MMOInformationModel {
-        HomeViewModelFactory.build(using: response)
+        for _ in 1...informationsPerPage {
+            paginatedMMOs.append((fullMMOs.removeFirst()))
+        }
+
+            buildCompleteModel(using: paginatedMMOs)
     }
 
     func buildCompleteModel(using response: [MMOInformationResponse]) {
         response.enumerated().forEach { index, mmoResponse in
-
-            self.service.fetchImage(url: mmoResponse.thumbnail) { data in
-                var completeModel: [MMOInformationModel] = []
+            service.fetchImage(url: mmoResponse.thumbnail) { data in
                 DispatchQueue.main.async { [weak self] in
                     guard let self = self else { return }
-                    firstPageModelList.append(MMOInformationModel(title: mmoResponse.title,
-                                                             thumbnailImage: UIImage(data: data),
-                                                             short_description: mmoResponse.short_description,
-                                                             game_url: mmoResponse.game_url,
-                                                             genre: mmoResponse.genre,
-                                                             platform: mmoResponse.platform,
-                                                             publisher: mmoResponse.publisher,
-                                                             developer: mmoResponse.developer,
-                                                             release_date: mmoResponse.release_date))
-
-                    
+                    let model = HomeViewModelFactory.build(using: mmoResponse, image: UIImage(data: data))
+                    mmosModel.append(model)
                 }
             }
         }
@@ -104,6 +86,7 @@ final class HomeViewModel {
 struct HomeViewModelFactory {
     static func build(using response: MMOInformationResponse, image: UIImage? = nil) -> MMOInformationModel {
         MMOInformationModel(title: response.title,
+                            thumbnail: response.thumbnail,
                             thumbnailImage: image,
                             short_description: response.short_description,
                             game_url: response.game_url,

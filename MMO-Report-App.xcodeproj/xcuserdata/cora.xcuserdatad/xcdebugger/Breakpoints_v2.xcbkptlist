@@ -247,7 +247,55 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D2BDAF6A-BA95-4715-ABE6-11B103AD3218"
+            uuid = "F8F2BAE6-B577-4079-AA50-6C819B3CEA59"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MMO-Report-App/Views/MainNews/ShortNewsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "searchNews(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F8F2BAE6-B577-4079-AA50-6C819B3CEA59 - b66ee05fcc463e1e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (MMO_Report_App.MMOGeneralNewsResponse) -&gt; () in closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;Swift.Array&lt;MMO_Report_App.MMOGeneralNewsResponse&gt;, MMO_Report_App.ApiError&gt;) -&gt; () in MMO_Report_App.MainNewsViewModel.searchNews(completion: (Swift.Array&lt;MMO_Report_App.MMOGeneralNewsModel&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MMO-Report-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cora/Documents/Pessoal/Development/MMO-Report-App/MMO-Report-App/Views/MainNews/ShortNewsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "F8F2BAE6-B577-4079-AA50-6C819B3CEA59 - b4bf552d2bcacacf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Foundation.Data) -&gt; () in closure #1 (MMO_Report_App.MMOGeneralNewsResponse) -&gt; () in closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;Swift.Array&lt;MMO_Report_App.MMOGeneralNewsResponse&gt;, MMO_Report_App.ApiError&gt;) -&gt; () in MMO_Report_App.MainNewsViewModel.searchNews(completion: (Swift.Array&lt;MMO_Report_App.MMOGeneralNewsModel&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MMO-Report-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cora/Documents/Pessoal/Development/MMO-Report-App/MMO-Report-App/Views/MainNews/ShortNewsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DCCF7857-22F5-4D40-A327-B08CE353C8AD"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -257,6 +305,150 @@
             startingLineNumber = "42"
             endingLineNumber = "42"
             landmarkName = "searchNews(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DCCF7857-22F5-4D40-A327-B08CE353C8AD - 91e4bc0d24d89a27"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;MMO_Report_App.MMOGeneralNewsResponse&gt;, MMO_Report_App.ApiError&gt;) -&gt; () in MMO_Report_App.MainNewsViewModel.searchNews(completion: (Swift.Array&lt;MMO_Report_App.MMOGeneralNewsModel&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MMO-Report-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cora/Documents/Pessoal/Development/MMO-Report-App/MMO-Report-App/Views/MainNews/ShortNewsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "892">
+               </Location>
+               <Location
+                  uuid = "DCCF7857-22F5-4D40-A327-B08CE353C8AD - 91e4bc0d24d89a27"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;MMO_Report_App.MMOGeneralNewsResponse&gt;, MMO_Report_App.ApiError&gt;) -&gt; () in MMO_Report_App.MainNewsViewModel.searchNews(completion: (Swift.Array&lt;MMO_Report_App.MMOGeneralNewsModel&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MMO-Report-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cora/Documents/Pessoal/Development/MMO-Report-App/MMO-Report-App/Views/MainNews/ShortNewsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "824">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3ED1DD63-E780-4778-977E-A9E2C7B3A68E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MMO-Report-App/Views/MainNews/ShortNewsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "searchNews(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DC3637DB-7058-4E4E-97CE-C54C252E9445"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MMO-Report-App/Service/ApiService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "fetchData(url:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EF3683BC-07F9-45DE-81A3-CC256109695E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MMO-Report-App/Service/ApiService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "fetchData(url:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "016BB285-AF10-4F8C-B162-908B7C311466"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MMO-Report-App/Service/ApiService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "fetchData(url:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "58AF0064-8F58-41D2-A9A3-A9E3B384B501"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MMO-Report-App/Service/ApiService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "fetchData(url:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B3D80777-7D4C-4279-84ED-842650FDF2F8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MMO-Report-App/Service/ApiService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "fetchData(url:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1BC12DAC-B16F-4B4A-993C-C1F6233F4C65"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MMO-Report-App/Service/ApiService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "fetchData(url:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

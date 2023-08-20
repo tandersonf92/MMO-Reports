@@ -88,12 +88,12 @@ struct HomeViewModelFactory {
         MMOInformationModel(title: response.title,
                             thumbnail: response.thumbnail,
                             thumbnailImage: image,
-                            short_description: response.short_description,
-                            game_url: response.game_url,
+                            shortDescription: response.shortDescription,
+                            gameUrl: response.gameUrl,
                             genre: response.genre,
                             platform: response.platform,
                             publisher: response.publisher,
                             developer: response.developer,
-                            release_date: response.release_date)
+                            releaseDate: response.releaseDate)
     }
 }

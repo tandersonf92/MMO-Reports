@@ -73,6 +73,15 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         return cell
     }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("indexPath.row selected: \(indexPath.row)")
+
+        let model = mmos[indexPath.row]
+        let vc = MMOCompleteInformationViewController(model: model)
+
+        present(vc, animated: true)
+    }
+
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         print("indexPath.row: \(indexPath.row)")
 
@@ -80,7 +89,6 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             if (indexPath.row + 1) % 20 == 0 && indexPath.row != 0  && indexPath.row == mmos.count - 1 {
                 fetchNewPage()
             }
-
         }
     }
 }

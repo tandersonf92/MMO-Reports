@@ -38,8 +38,8 @@ struct MainNewsViewModel {
                         })
                     })
                 }
-            case .failure:
-                print("ERROR fetchNews")
+            case .failure(let error):
+                print("ERROR fetchNews \(error)")
             }
         }
     }

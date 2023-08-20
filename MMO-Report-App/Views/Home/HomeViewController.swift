@@ -11,7 +11,7 @@ final class HomeViewController: UIViewController {
     private var mmos: [MMOInformationModel] = [] {
         didSet {
             DispatchQueue.main.async {
-                    self.collectionView.reloadData()
+                self.collectionView.reloadData()
             }
         }
     }

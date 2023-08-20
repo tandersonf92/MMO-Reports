@@ -67,7 +67,7 @@ final class HomeViewModel {
             paginatedMMOs.append((fullMMOs.removeFirst()))
         }
 
-            buildCompleteModel(using: paginatedMMOs)
+        buildCompleteModel(using: paginatedMMOs)
     }
 
     func buildCompleteModel(using response: [MMOInformationResponse]) {

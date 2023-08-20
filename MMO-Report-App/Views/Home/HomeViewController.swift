@@ -5,10 +5,11 @@ final class HomeViewController: UIViewController {
     private let viewModel = HomeViewModel()
 
     private var lastSearchedPage: Int = 0
+    private var isLoading: Bool = false
+    private var isBlockedToAppendNewCells: Bool = false
 
     private var mmos: [MMOInformationModel] = [] {
         didSet {
-            print(mmos.count)
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
             }
@@ -45,17 +46,21 @@ final class HomeViewController: UIViewController {
     }
 
     private func setupBinders() {
-        viewModel.paginatingInformation.bind { [weak self] result in
+        viewModel.listOfMMos.bind { [weak self] result in
             guard let self = self else { return }
-            guard let unwrappedResultModel = result[self.lastSearchedPage] else { return }
-            unwrappedResultModel.forEach({ self.mmos.append($0) })
+            mmos = result
         }
+    }
+
+    private func fetchNewPage() {
+        lastSearchedPage += 1
+        viewModel.fetchNextPage()
     }
 }
 
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        mmos.count
+        mmos.count == 0 ? 0 : mmos.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -66,6 +71,17 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         cell.backgroundColor = .darkGray
 
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        print("indexPath.row: \(indexPath.row)")
+
+        if isLoading == false {
+            if (indexPath.row + 1) % 20 == 0 && indexPath.row != 0  && indexPath.row == mmos.count - 1 {
+                fetchNewPage()
+            }
+
+        }
     }
 }
 

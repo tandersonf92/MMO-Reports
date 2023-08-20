@@ -4,6 +4,7 @@ final class HomeViewModel {
     private let service: ApiServiceProtocol
     
     private var fullMMOs: [MMOInformationResponse] = []
+    private var filteredMMOs: [MMOInformationResponse] = []
     private var numberOfPages: Int = 0
     private var actualPage: Int = 0
     var isLastPage: Bool = false
@@ -27,11 +28,10 @@ final class HomeViewModel {
             guard let self = self else { return }
             switch result {
             case .success(let success):
+                print("RESULT.COUNT: \(success.count)")
                 fullMMOs = success
-                self.numberOfPages = success.count % 20 == 0 ? success.count / 20 : (success.count / 20) + 1
-                DispatchQueue.main.async { [weak self] in
-                    self?.setupPagination()
-                }
+                numberOfPages = success.count % 20 == 0 ? success.count / 20 : (success.count / 20) + 1
+                setupPagination()
             case .failure(let failure):
                 print(failure)
             }

@@ -55,7 +55,7 @@ struct APIService: ApiServiceProtocol {
     }
     
     func fetchMMOs(keywords: String? = nil, completion: @escaping (Result<[MMOInformationResponse], ApiError>) -> Void) {
-        fetchData(url: TypeOfInformation.game(params: nil).value, completion: completion)
+        fetchData(url: TypeOfInformation.game(params: nil).url, completion: completion)
     }
     
     func fetchImage(url: String, completion: @escaping (Data) -> Void) {

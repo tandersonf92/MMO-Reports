@@ -3,26 +3,26 @@ import UIKit
 struct MMOInformationResponse: Codable {
     let title: String
     let thumbnail: String
-    let short_description: String
-    let game_url: String
+    let shortDescription: String
+    let gameUrl: String
     let genre: String
     let platform: String
     let publisher: String
     let developer: String
-    let release_date: String
+    let releaseDate: String
 }
 
 struct MMOInformationModel {
     let title: String
     let thumbnail: String
     let thumbnailImage: UIImage?
-    let short_description: String
-    let game_url: String
+    let shortDescription: String
+    let gameUrl: String
     let genre: String
     let platform: String
     let publisher: String
     let developer: String
-    let release_date: String
+    let releaseDate: String
 }
 
 //enum Genre {

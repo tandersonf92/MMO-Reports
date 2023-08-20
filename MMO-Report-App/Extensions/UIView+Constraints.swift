@@ -74,6 +74,10 @@ public extension UIView {
         self.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
     }
 
+    func equalWidthWithScreen() {
+        self.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width).isActive = true
+    }
+
     func setAnchorsEqual(to base: UIView,
                          _ padding: UIEdgeInsets = UIEdgeInsets.zero, safe: Bool = false) {
         safe ? setAnchorsWithSafeArea(base, padding) : setAnchors(base, padding)

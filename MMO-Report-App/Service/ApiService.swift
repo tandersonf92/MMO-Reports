@@ -16,22 +16,29 @@ enum TypeOfInformation {
         "https://www.mmobomb.com/api1"
     }
 
-    var value: String {
+    var url: URL? {
         switch self {
         case .game(let params):
             guard let params = params else {
-                return "\(baseURL)/games?"
+                return getUrl(of: "\(baseURL)/games?")
             }
-            let configuredParams = setupQueryParams(using: params )
-            return "\(baseURL)/games?\(configuredParams)"
+            var urlWithParams = URLComponents(string: "\(baseURL)/games?")
+            let configuredParams = setupQueryParams(using: params)
+            urlWithParams?.queryItems = configuredParams
+             let url = urlWithParams?.url
+            return url
         case .news:
-            return "\(baseURL)/latestnews"
+            return getUrl(of: "\(baseURL)/latestnews")
         }
     }
-    
+
     func setupQueryParams(using params: [String: String]) -> [URLQueryItem] {
         let queryParams: [URLQueryItem] = params.map { URLQueryItem(name: $0.key, value: $0.value) }
         return queryParams
+    }
+
+    func getUrl(of value: String) -> URL? {
+        URL(string: value)
     }
 }
 
@@ -44,11 +51,11 @@ protocol ApiServiceProtocol {
 struct APIService: ApiServiceProtocol {
     
     func fetchNews(completion: @escaping (Result<[MMOGeneralNewsResponse], ApiError>) -> Void) {
-        fetchData(url: TypeOfInformation.news.value, completion: completion)
+        fetchData(url: TypeOfInformation.news.url, completion: completion)
     }
     
     func fetchMMOs(keywords: String? = nil, completion: @escaping (Result<[MMOInformationResponse], ApiError>) -> Void) {
-        fetchData(url: TypeOfInformation.game(params: nil).value, completion: completion)
+        fetchData(url: TypeOfInformation.game(params: nil).url, completion: completion)
     }
     
     func fetchImage(url: String, completion: @escaping (Data) -> Void) {
@@ -62,8 +69,8 @@ struct APIService: ApiServiceProtocol {
         dataTask.resume()
     }
 
-    private func fetchData<T: Codable>(url: String, completion: @escaping (Result<T, ApiError>) -> Void) {
-        guard let url = URL(string: url) else {
+    private func fetchData<T: Codable>(url: URL?, completion: @escaping (Result<T, ApiError>) -> Void) {
+        guard let url = url else {
             return completion(.failure(ApiError.invalidURL))
         }
         print("URLLLLLLLLL: \(url)")

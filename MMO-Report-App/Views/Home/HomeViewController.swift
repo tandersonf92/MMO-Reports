@@ -4,10 +4,6 @@ final class HomeViewController: UIViewController {
 
     private let viewModel = HomeViewModel()
 
-    private var lastSearchedPage: Int = 0
-    private var isLoading: Bool = false
-    private var isBlockedToAppendNewCells: Bool = false
-
     private var mmos: [MMOInformationModel] = [] {
         didSet {
             DispatchQueue.main.async {
@@ -53,7 +49,6 @@ final class HomeViewController: UIViewController {
     }
 
     private func fetchNewPage() {
-        lastSearchedPage += 1
         viewModel.fetchNextPage()
     }
 }
@@ -74,8 +69,6 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("indexPath.row selected: \(indexPath.row)")
-
         let model = mmos[indexPath.row]
         let vc = MMOCompleteInformationViewController(model: model)
 
@@ -83,12 +76,8 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
 
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        print("indexPath.row: \(indexPath.row)")
-
-        if isLoading == false {
             if (indexPath.row + 1) % 20 == 0 && indexPath.row != 0  && indexPath.row == mmos.count - 1 {
                 fetchNewPage()
-            }
         }
     }
 }

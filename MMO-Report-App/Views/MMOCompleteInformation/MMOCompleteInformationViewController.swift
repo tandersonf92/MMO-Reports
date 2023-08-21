@@ -12,7 +12,7 @@ final class MMOCompleteInformationViewController: UIViewController {
     private lazy var thumbnailImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = model.thumbnailImage
-        imageView.contentMode = .scaleAspectFit
+//        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
 
@@ -27,15 +27,8 @@ final class MMOCompleteInformationViewController: UIViewController {
     private lazy var mmoNameLabel: UILabel = {
         let label = UILabel()
         label.text = model.title
-        label.textAlignment = .center
-        return label
-    }()
-
-
-    private lazy var descriptionLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.text = model.shortDescription
+        label.font = .boldSystemFont(ofSize: 24)
+//        label.textAlignment = .center
         return label
     }()
 
@@ -45,8 +38,17 @@ final class MMOCompleteInformationViewController: UIViewController {
         return label
     }()
 
+    private lazy var descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.text = model.shortDescription
+        label.font = .italicSystemFont(ofSize: 14)
+        return label
+    }()
+
     private lazy var platformLabel: UILabel = {
         let label = UILabel()
+        label.text = "Platform(s): \(model.platform)"
         return label
     }()
 
@@ -89,9 +91,9 @@ extension MMOCompleteInformationViewController: ViewConfiguration {
         mainContentView.addSubview(thumbnailImageView)
         mainContentView.addSubview(contentStackView)
         [mmoNameLabel,
+         genreLabel,
          descriptionLabel,
          UIView(),
-         genreLabel,
          platformLabel,
          publisherLabel,
          releaseDateLabel].forEach(contentStackView.addArrangedSubview)
@@ -106,16 +108,20 @@ extension MMOCompleteInformationViewController: ViewConfiguration {
 
         mainContentView.heightAnchor.constraint(greaterThanOrEqualTo: scrollView.heightAnchor).isActive = true
 
+//        thumbnailImageView.size(width: 300)
+//        thumbnailImageView.anchor(top: mainContentView.safeAreaLayoutGuide.topAnchor, paddingTop: 40)
 
-        thumbnailImageView.size(height: 300)
-        thumbnailImageView.anchor(top: mainContentView.safeAreaLayoutGuide.topAnchor, paddingTop: 24)
-        thumbnailImageView.centerXEqual(to: view)
+        thumbnailImageView.anchor(top: mainContentView.safeAreaLayoutGuide.topAnchor,
+                                  leading: mainContentView.leadingAnchor,
+                                  trailing: mainContentView.trailingAnchor)
+
+//        thumbnailImageView.centerXEqual(to: view)
 
         contentStackView.anchor(top: thumbnailImageView.bottomAnchor,
                                 leading: mainContentView.leadingAnchor,
-                                bottom: mainContentView.bottomAnchor,
+                                bottom: mainContentView.safeAreaLayoutGuide.bottomAnchor,
                                 trailing: mainContentView.trailingAnchor,
-                                paddingTop: 24,
+                                paddingTop: 12,
                                 paddingBottom: 24,
                                 paddingLeft: 24,
                                 paddingRight: 24)

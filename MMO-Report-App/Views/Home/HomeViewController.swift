@@ -63,7 +63,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             return .init()
         }
         cell.setupCell(using: mmos[indexPath.row])
-        cell.backgroundColor = .darkGray
+//        cell.backgroundColor = .darkGray
 
         return cell
     }

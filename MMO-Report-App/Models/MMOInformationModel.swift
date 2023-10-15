@@ -15,7 +15,7 @@ struct MMOInformationResponse: Codable {
 struct MMOInformationModel {
     let title: String
     let thumbnail: String
-    let thumbnailImage: UIImage?
+    var thumbnailImage: UIImage?
     let shortDescription: String
     let gameUrl: String
     let genre: String
@@ -25,25 +25,44 @@ struct MMOInformationModel {
     let releaseDate: String
 }
 
-//enum Genre {
-//    mmorpg,
-//    shooter,
-//    strategy,
-//    moba,
-//    racing,
-//    sports,
-//    social,
-//    sandbox,
-//    open-world,
-//    survival,
-//    pvp,
-//    pve,
-//    pixel,
-//    voxel,
-//    zombie,
-//    turn-based,
-//    first-person,
-//    third-Person,
+enum Genre: String {
+    case mmorpg,
+         shooter,
+         strategy,
+         moba,
+         racing,
+         openWorld,
+         pixel,
+         voxel,
+         zombie,
+         turnBased = "turn-based",
+         firstPerson = "first-person",
+         thirdPerson = "third-Person",
+         card,
+         battleRoyale = "battle-royale",
+         martialArts = "martial-arts"
+}
+
+//
+//enum Genre: String {
+//    case mmorpg,
+//         shooter,
+//         strategy,
+//         moba,
+//         racing,
+//         sports,
+//         social,
+//         sandbox,
+//         openWorld,
+//         survival,
+//         pvp,
+//         pve,
+//         pixel,
+//         voxel,
+//         zombie,
+//         turnBased = "turn-based",
+//         firstPerson = "first-person",
+//         third-Person,
 //    top-down,
 //    tank,
 //    space,
@@ -81,7 +100,7 @@ enum Platform {
 
 enum SortBy {
     case releaseDate,
-    popularity,
-    alphabetical,
-    relevance
+         popularity,
+         alphabetical,
+         relevance
 }

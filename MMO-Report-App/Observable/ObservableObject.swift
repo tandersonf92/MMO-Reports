@@ -19,4 +19,3 @@ final class ObservableObject<T> {
         self.listener = listener
     }
 }
-

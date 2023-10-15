@@ -53,7 +53,6 @@ extension MMONewsCell: ViewConfiguration {
 
     func setupConstraints() {
         contentStackView.setAnchorsEqual(to: contentView, .init(top: 12, left: 12, bottom: 12, right: 12))
-
         contentStackView.centerYEqual(to: contentView)
 
         thumbnailImageView.size(height: 45, width: 80)

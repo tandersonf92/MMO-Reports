@@ -55,12 +55,12 @@ extension HomeCollectionViewCell: ViewConfiguration {
         gameNameLabel.anchor(top: mainImage.bottomAnchor,
                              leading: leadingAnchor,
                              bottom: bottomAnchor,
-                             trailing: trailingAnchor,
+//                             trailing: trailingAnchor,
                              paddingTop: 8,
                              paddingBottom: 4,
                              paddingLeft: 0,
                              paddingRight: 0)
 
-        mainImage.size(height: 60)
+        mainImage.size(height: 120)
     }
 }

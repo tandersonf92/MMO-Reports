@@ -17,7 +17,7 @@ final class HomeTabBarController: UITabBarController {
 
         let mainViewController = UINavigationController(rootViewController: HomeViewController())
         let newsViewController = UINavigationController(rootViewController: MainNewsViewController())
-        let favoritesViewController = UINavigationController(rootViewController: FavoritesViewController())
+        let favoritesViewController = UINavigationController(rootViewController: CategoriesSectionViewController())
 
         let tabBarControllers = [mainViewController, newsViewController, favoritesViewController]
 

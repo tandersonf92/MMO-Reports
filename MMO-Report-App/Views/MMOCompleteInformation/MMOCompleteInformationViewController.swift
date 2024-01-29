@@ -100,7 +100,7 @@ extension MMOCompleteInformationViewController: ViewConfiguration {
     }
 
     func setupConstraints() {
-        scrollView.setAnchorsEqual(to: view)
+        scrollView.setAnchorsEqual(to: view, safe: true)
         scrollView.equalWidthWithScreen()
 
         mainContentView.setAnchorsEqual(to: scrollView)
@@ -108,8 +108,7 @@ extension MMOCompleteInformationViewController: ViewConfiguration {
 
         mainContentView.heightAnchor.constraint(greaterThanOrEqualTo: scrollView.heightAnchor).isActive = true
 
-//        thumbnailImageView.size(width: 300)
-//        thumbnailImageView.anchor(top: mainContentView.safeAreaLayoutGuide.topAnchor, paddingTop: 40)
+        thumbnailImageView.size(height: 300)
 
         thumbnailImageView.anchor(top: mainContentView.safeAreaLayoutGuide.topAnchor,
                                   leading: mainContentView.leadingAnchor,

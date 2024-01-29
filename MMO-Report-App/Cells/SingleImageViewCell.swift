@@ -38,10 +38,6 @@ extension SingleImageViewCell: ViewConfiguration {
     }
 
     func setupConstraints() {
-        mainImageView.setAnchorsEqual(to: contentView,
-                                      .init(top: 0,
-                                            left: 0,
-                                            bottom: 0,
-                                            right: 0))
+        mainImageView.setAnchorsEqual(to: contentView)
     }
 }

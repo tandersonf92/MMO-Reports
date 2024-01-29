@@ -1,14 +1,19 @@
 struct MMOListByCategoryModel {
     let genre: Genre
     var listOfMMOs: [MMOInformationModel]
+}
+
+struct MMOListByCategoryPaginatedModel {
+    let genre: Genre
+    var listOfMMOs: [MMOInformationModel]
+    var listOfPaginatedMMOs: [Int: [MMOInformationModel]]
     var numberOfPages: Int
 }
 
 enum MMOListByCategoryModelFactory {
-    static func convertToModel(response: MMOListByCategoryResponse, itemsPerPage: Int) ->MMOListByCategoryModel {
+    static func convertToModel(response: MMOListByCategoryResponse) ->MMOListByCategoryModel {
         MMOListByCategoryModel(genre: response.genre,
-                               listOfMMOs: convertInformationResponseToModel(response: response.listOfMMOs),
-                               numberOfPages: getNumberOfPages(numberOfItems: response.listOfMMOs.count, itemsPerPage: itemsPerPage))
+                               listOfMMOs: convertInformationResponseToModel(response: response.listOfMMOs))
     }
 
     static func convertInformationResponseToModel(response: [MMOInformationResponse]) -> [MMOInformationModel] {
@@ -23,6 +28,13 @@ enum MMOListByCategoryModelFactory {
                                 developer: response.developer,
                                 releaseDate: response.releaseDate)
         }
+    }
+
+    static func convertInformationResponseToPaginatedModel(paginatedList: [Int: [MMOInformationModel]], normalList: [MMOInformationModel], genre: Genre, numberOfPages: Int) -> MMOListByCategoryPaginatedModel {
+        MMOListByCategoryPaginatedModel(genre: genre,
+                                        listOfMMOs: normalList,
+                                        listOfPaginatedMMOs: paginatedList,
+                                        numberOfPages: numberOfPages)
     }
 
     static func getNumberOfPages(numberOfItems: Int, itemsPerPage: Int) -> Int {

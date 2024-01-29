@@ -241,6 +241,21 @@
                   endingLineNumber = "42"
                   offsetFromSymbolStart = "824">
                </Location>
+               <Location
+                  uuid = "DCCF7857-22F5-4D40-A327-B08CE353C8AD - a48543643c36dc35"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;MMO_Report_App.MMOGeneralNewsResponse&gt;, MMO_Report_App.ApiError&gt;) -&gt; () in MMO_Report_App.MainNewsViewModel.searchNews(completion: (Swift.Array&lt;MMO_Report_App.MMOGeneralNewsModel&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MMO-Report-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cora/Documents/Pessoal/ProgramacaoEmGeral/Development/MMO-Report-App/MMO-Report-App/Views/MainNews/ShortNewsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "848">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>

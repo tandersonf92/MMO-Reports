@@ -14,9 +14,9 @@ final class HomeViewController: UIViewController {
 
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        //        layout.scrollDirection = .horizontal
         layout.itemSize = CGSize(width: (UIScreen.main.bounds.width - 60) / 2, height: 120)
-        //        layout.sectionInset = UIEdgeInsets(top: 21.5, left: 18, bottom: 21.5, right: 18)
+//        layout.scrollDirection = .horizontal
+//                layout.sectionInset = UIEdgeInsets(top: 21.5, left: 1, bottom: 21.5, right: 1)
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.register(HomeCollectionViewCell.self, forCellWithReuseIdentifier: HomeCollectionViewCell.identifier)
@@ -49,11 +49,16 @@ final class HomeViewController: UIViewController {
     }
 
     private func fetchNewPage() {
-        viewModel.fetchNextPage()
+//        viewModel.fetchNextPage()
     }
 }
 
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        1
+    }
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         mmos.count == 0 ? 0 : mmos.count
     }
@@ -64,7 +69,6 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         }
         cell.setupCell(using: mmos[indexPath.row])
         cell.backgroundColor = .darkGray
-
         return cell
     }
 
@@ -94,12 +98,22 @@ extension HomeViewController: ViewConfiguration {
     }
 
     func setupConstraints() {
-        collectionView.setAnchorsEqual(to: view,
-                                       .init(top: 24,
-                                             left: 24,
-                                             bottom: 24,
-                                             right: 24),
-                                       safe: true)
+//        collectionView.setAnchorsEqual(to: view,
+//                                       .init(top: 24,
+//                                             left: 24,
+//                                             bottom: 24,
+//                                             right: 24),
+//                                       safe: true)
+
+        collectionView.anchor(top: view.safeAreaLayoutGuide.topAnchor,
+                              leading: view.leadingAnchor,
+                              bottom: view.safeAreaLayoutGuide.bottomAnchor,
+                              trailing: view.trailingAnchor,
+                              paddingTop: 24,
+                              paddingBottom: 24,
+                              paddingLeft: 24,
+                              paddingRight: 24
+        )
     }
 }
 

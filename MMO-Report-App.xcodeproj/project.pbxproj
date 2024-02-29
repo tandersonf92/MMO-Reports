@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		870365A52ADAD03300D0EC89 /* MMosByCategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870365A42ADAD03300D0EC89 /* MMosByCategoriesViewModel.swift */; };
+		870365A72ADAE86300D0EC89 /* MMOListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870365A62ADAE86300D0EC89 /* MMOListService.swift */; };
+		870365A92ADAE91700D0EC89 /* ImageDownloaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870365A82ADAE91700D0EC89 /* ImageDownloaderService.swift */; };
+		870365AD2ADB0CDC00D0EC89 /* CategorySectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870365AC2ADB0CDC00D0EC89 /* CategorySectionViewCell.swift */; };
+		870365B02ADB0DD900D0EC89 /* CategoriesSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870365AF2ADB0DD900D0EC89 /* CategoriesSectionViewController.swift */; };
+		870365B22ADB115B00D0EC89 /* SingleImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870365B12ADB115B00D0EC89 /* SingleImageViewCell.swift */; };
+		870365B42ADB18BF00D0EC89 /* MMOListByCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870365B32ADB18BF00D0EC89 /* MMOListByCategoryModel.swift */; };
 		8703833C2A8D6BBD00FE10FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8703833B2A8D6BBD00FE10FC /* AppDelegate.swift */; };
 		8703833E2A8D6BBD00FE10FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8703833D2A8D6BBD00FE10FC /* SceneDelegate.swift */; };
 		870383402A8D6BBD00FE10FC /* ShortNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8703833F2A8D6BBD00FE10FC /* ShortNewsViewController.swift */; };
@@ -34,6 +41,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		870365A42ADAD03300D0EC89 /* MMosByCategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMosByCategoriesViewModel.swift; sourceTree = "<group>"; };
+		870365A62ADAE86300D0EC89 /* MMOListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMOListService.swift; sourceTree = "<group>"; };
+		870365A82ADAE91700D0EC89 /* ImageDownloaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderService.swift; sourceTree = "<group>"; };
+		870365AC2ADB0CDC00D0EC89 /* CategorySectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySectionViewCell.swift; sourceTree = "<group>"; };
+		870365AF2ADB0DD900D0EC89 /* CategoriesSectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesSectionViewController.swift; sourceTree = "<group>"; };
+		870365B12ADB115B00D0EC89 /* SingleImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleImageViewCell.swift; sourceTree = "<group>"; };
+		870365B32ADB18BF00D0EC89 /* MMOListByCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMOListByCategoryModel.swift; sourceTree = "<group>"; };
 		870383382A8D6BBD00FE10FC /* MMO-Report-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MMO-Report-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8703833B2A8D6BBD00FE10FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8703833D2A8D6BBD00FE10FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		870365AE2ADB0DC500D0EC89 /* CategoriesSectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				870365AF2ADB0DD900D0EC89 /* CategoriesSectionViewController.swift */,
+			);
+			path = CategoriesSectionViewController;
+			sourceTree = "<group>";
+		};
 		8703832F2A8D6BBD00FE10FC = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				870383502A8D6BED00FE10FC /* ApiService.swift */,
+				870365A62ADAE86300D0EC89 /* MMOListService.swift */,
+				870365A82ADAE91700D0EC89 /* ImageDownloaderService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -122,6 +146,7 @@
 			children = (
 				870383532A8D6CD400FE10FC /* MMOInformationModel.swift */,
 				870383552A8D731C00FE10FC /* MMOGeneralNewsModel.swift */,
+				870365B32ADB18BF00D0EC89 /* MMOListByCategoryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -131,6 +156,8 @@
 			children = (
 				870383582A8D78AF00FE10FC /* MMONewsCell.swift */,
 				87BE46C42A91087500C3D489 /* HomeCollectionViewCell.swift */,
+				870365AC2ADB0CDC00D0EC89 /* CategorySectionViewCell.swift */,
+				870365B12ADB115B00D0EC89 /* SingleImageViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -148,6 +175,7 @@
 		874EBCC32A8F908000473311 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				870365AE2ADB0DC500D0EC89 /* CategoriesSectionViewController */,
 				878604402A925C5100D34CA2 /* MMOCompleteInformation */,
 				87BE46C82A91113B00C3D489 /* Favorites */,
 				87BE46C72A91113600C3D489 /* FullNotice */,
@@ -170,6 +198,7 @@
 		878F1E592A8FF2AD00EAAEC3 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				870365A42ADAD03300D0EC89 /* MMosByCategoriesViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -306,9 +335,15 @@
 			files = (
 				870383402A8D6BBD00FE10FC /* ShortNewsViewController.swift in Sources */,
 				87BE46C32A90F3A100C3D489 /* HomeViewModel.swift in Sources */,
+				870365A92ADAE91700D0EC89 /* ImageDownloaderService.swift in Sources */,
+				870365AD2ADB0CDC00D0EC89 /* CategorySectionViewCell.swift in Sources */,
+				870365B42ADB18BF00D0EC89 /* MMOListByCategoryModel.swift in Sources */,
 				878F1E612A8FF80E00EAAEC3 /* ShortNewsViewModel.swift in Sources */,
+				870365B02ADB0DD900D0EC89 /* CategoriesSectionViewController.swift in Sources */,
 				878604422A925C5E00D34CA2 /* MMOCompleteInformationViewController.swift in Sources */,
+				870365B22ADB115B00D0EC89 /* SingleImageViewCell.swift in Sources */,
 				87BE46C52A91087500C3D489 /* HomeCollectionViewCell.swift in Sources */,
+				870365A72ADAE86300D0EC89 /* MMOListService.swift in Sources */,
 				870969E92A8EB9D8002ED064 /* String+Extension.swift in Sources */,
 				870383562A8D731C00FE10FC /* MMOGeneralNewsModel.swift in Sources */,
 				870383542A8D6CD400FE10FC /* MMOInformationModel.swift in Sources */,
@@ -322,6 +357,7 @@
 				878F1E5D2A8FF47B00EAAEC3 /* FavoritesViewController.swift in Sources */,
 				874EBCC52A8F90B000473311 /* FullNoticeViewController.swift in Sources */,
 				87FC24112A9149F50085DCDB /* ObservableObject.swift in Sources */,
+				870365A52ADAD03300D0EC89 /* MMosByCategoriesViewModel.swift in Sources */,
 				870383592A8D78AF00FE10FC /* MMONewsCell.swift in Sources */,
 				8703833E2A8D6BBD00FE10FC /* SceneDelegate.swift in Sources */,
 				878F1E5B2A8FF2B800EAAEC3 /* HomeTabBarViewModel.swift in Sources */,

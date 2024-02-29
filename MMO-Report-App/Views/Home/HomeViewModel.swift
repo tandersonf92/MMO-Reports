@@ -44,7 +44,6 @@ final class HomeViewModel {
         let informationsPerPage: Int = isLastPage ? fullMMOs.count % 20 : 20
         var paginatedMMOs: [MMOInformationResponse] = []
 
-
         for _ in 1...informationsPerPage {
             paginatedMMOs.append((fullMMOs.removeFirst()))
         }
@@ -73,11 +72,8 @@ final class HomeViewModel {
     func buildCompleteModel(using response: [MMOInformationResponse]) {
         response.enumerated().forEach { index, mmoResponse in
             service.fetchImage(url: mmoResponse.thumbnail) { data in
-                DispatchQueue.main.async { [weak self] in
-                    guard let self = self else { return }
                     let model = HomeViewModelFactory.build(using: mmoResponse, image: UIImage(data: data))
-                    mmosModel.append(model)
-                }
+                self.mmosModel.append(model)
             }
         }
     }
